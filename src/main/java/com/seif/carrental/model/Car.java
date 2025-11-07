@@ -30,6 +30,6 @@ public class Car {
     private CarStatus status;
 
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
-    @JsonBackReference(value = "car-rentals")
+    @JsonManagedReference(value = "car-rentals")
     private List<Rental> rentals;
 }

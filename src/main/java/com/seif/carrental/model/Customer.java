@@ -27,6 +27,6 @@ public class Customer {
     private String driverLicenseNumber;
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
-    @JsonBackReference(value = "customer-rentals")
+    @JsonManagedReference(value = "customer-rentals")
     private List<Rental> rentals;
 }

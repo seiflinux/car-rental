@@ -24,12 +24,12 @@ public class Rental {
 
     @ManyToOne
     @JoinColumn(name = "car_id")
-    @JsonManagedReference(value = "car-rentals")
+    @JsonBackReference(value = "car-rentals")
     private Car car;
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
-    @JsonManagedReference(value = "customer-rentals")
+    @JsonBackReference(value = "customer-rentals")
     private Customer customer;
 
     @OneToOne(mappedBy = "rental", cascade = CascadeType.ALL)
